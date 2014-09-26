@@ -19,7 +19,7 @@ describe("Intro to Jasmine and JS basics", function() {
           i = 'I',
           love = 'love',
           javascript = 'JavaScript';
-      expect(/* your answer goes here */).toBe('Oh my, how I do love JavaScript!!!');
+      expect(/* your answer goes here */).toBe('Oh my, how I love JavaScript!!!');
     });
     it("should select the right character from the string", function() {
       expect('kreplach'/* your answer goes here */).toBe('c');

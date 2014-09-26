@@ -22,22 +22,22 @@ describe("Intro to Jasmine and JS basics", function() {
       expect(oh + ' ' + my + ', ' + how + ' ' + i + ' ' + love + ' ' + javascript + '!!!').toBe('Oh my, how I love JavaScript!!!');
     });
     it("should select the right character from the string", function() {
-      expect('kreplach'/* your answer goes here */).toBe('c');
+      expect('kreplach'[6]).toBe('c');
     });
   });
 
   describe("Numbers", function() {
     it("should correctly floor four", function() {
-      expect(4.00000000000001).toBe(4);
+      expect(Math.floor(4.00000000000001)).toBe(4);
     });
   });
 
   describe("Booleans", function() {
     it("should add two booleans together to get 1", function() {
-      expect(/* your answer goes here */).toBe(1);
+      expect(true + false).toBe(1);
     });
     it("should convert 0 into false", function() {
-      expect(/* your answer goes here */).toBe(false);
+      expect(!!0).toBe(false);
     });
   });
 });

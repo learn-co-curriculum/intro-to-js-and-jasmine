@@ -19,7 +19,8 @@ Install jasmine:
   ```
 Run Jasmine test suite:
   ```shell
-  $ jasmine-flatiron
+  $ jasmine-flatiron  # runs only in the terminal
+  $ jasmine-flatiron -b # runs also in the browser
   ```
 
 ## Resources

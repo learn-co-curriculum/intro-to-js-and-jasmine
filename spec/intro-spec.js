@@ -1,13 +1,13 @@
 describe("Intro to Jasmine and JS basics", function() {
   describe("Variables", function() {
     it("should create a variable called car with the value 'Mustang' that is not assigned to the window", function() {
-      // some assignment goes here.
+      var car = 'Mustang';
       expect(car).toBe('Mustang');
       expect(window.car).toBe(undefined);
     });
     it("should have a variable return undefined without explicitly assigning it to undefined", function() {
-      // something gos here
-      expect(/* your answer goes here */).toBe(undefined);
+      var something;
+      expect(something).toBe(undefined);
     });
   });
 

@@ -15,6 +15,7 @@ This lab is designed to get you comfortable with the syntax of Jasmine as well a
 ##Before You Start
 Install jasmine:
   ```shell
+  $ gem sources -a http://flatiron:33west26@gems.flatironschool.com
   $ gem install jasmine-flatiron
   ```
 Run Jasmine test suite:

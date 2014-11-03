@@ -42,9 +42,19 @@ describe('Intro to Jasmine and JS basics', function() {
   });
 
   describe('Arrays', function() {
-    it('should be able to iterate through an array an use numbers and their indices', function() {
-      [1, 2, 3, 4, 5].forEach(function(/* needs to pass some args */){
-        expect(num - 1).toEqual(i);
+    describe('For Loops', function() {
+      it('be able to use for loops to loop through an array', function() {
+        var arr = [0, 0.3, 0.6, 1]
+        for (/* your code goes here */) {
+          expect( Math.ceil(arr[i] * 3) ).toEqual(i);
+        }
+      });
+    });
+    describe('#forEach', function() {    
+      it('should be able to iterate through an array an use numbers and their indices', function() {
+        [1, 2, 3, 4, 5].forEach(function(/* needs to pass some args */){
+          expect(num - 1).toEqual(i);
+        });
       });
     });
   });

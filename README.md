@@ -28,3 +28,4 @@ Run Jasmine test suite:
 * [Jasmine Documentation](http://jasmine.github.io/2.0/introduction.html)
 * [String Constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 * [Number Constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+* [Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)

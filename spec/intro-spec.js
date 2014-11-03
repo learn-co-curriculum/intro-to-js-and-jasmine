@@ -1,6 +1,6 @@
 describe('Intro to Jasmine and JS basics', function() {
   describe('Variables', function() {
-    it('should create a variable called car with the value 'Mustang' that is not assigned to the window', function() {
+    it('should create a variable called car with the value "Mustang" that is not assigned to the window', function() {
       // some assignment goes here.
       expect(car).toBe('Mustang');
       expect(window.car).toBe(undefined);

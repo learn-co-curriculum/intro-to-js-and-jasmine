@@ -44,7 +44,7 @@ describe('Intro to Jasmine and JS basics', function() {
   describe('Arrays', function() {
     it('should be able to iterate through an array', function() {
       [1, 2, 3, 4, 5].forEach(function(/* needs to pass some args */){
-        expect(num - 1).toEq(i);
+        expect(num - 1).toEqual(i);
       });
     });
   });

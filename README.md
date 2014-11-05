@@ -16,12 +16,12 @@ This lab is designed to get you comfortable with the syntax of Jasmine as well a
 Install jasmine:
   ```shell
   $ gem sources -a http://flatiron:33west26@gems.flatironschool.com
-  $ gem install jasmine-flatiron
+  $ gem install ironboard
   ```
 Run Jasmine test suite:
   ```shell
-  $ jasmine-flatiron  # runs only in the terminal
-  $ jasmine-flatiron -b # runs also in the browser
+  $ ironboard  # runs only in the terminal
+  $ ironboard -b # runs also in the browser
   ```
 
 ## Resources

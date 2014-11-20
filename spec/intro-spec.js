@@ -1,3 +1,4 @@
+'use strict';
 describe('Intro to Jasmine and JS basics', function() {
   describe('Variables', function() {
     it('should create a variable called car with the value "Mustang" that is not assigned to the window', function() {

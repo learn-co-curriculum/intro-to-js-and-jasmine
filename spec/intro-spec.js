@@ -6,7 +6,7 @@ describe('Intro to Jasmine and JS basics', function() {
       expect(window.car).toBe(undefined);
     });
     it('should have a variable return undefined without explicitly assigning it to undefined', function() {
-      // something gos here
+      // something goes here.
       expect(/* your answer goes here */).toBe(undefined);
     });
   });
@@ -43,11 +43,11 @@ describe('Intro to Jasmine and JS basics', function() {
 
   describe('Arrays', function() {
     describe('For Loops', function() {
-      it('be able to use for loops to loop through an array', function() {
+      it('should be able to use for loops to loop through an array', function() {
         var arr = [0, 0.3, 0.6, 1]
-        for (/* your code goes here */) {
+        /* your for loop code starts here here */
           expect( Math.ceil(arr[i] * 3) ).toEqual(i);
-        }
+        /* and ends here */
       });
     });
     describe('#forEach', function() {    

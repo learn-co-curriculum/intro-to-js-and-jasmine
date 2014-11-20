@@ -44,7 +44,7 @@ describe('Intro to Jasmine and JS basics', function() {
 
   describe('Arrays', function() {
     describe('For Loops', function() {
-      it('be able to use for loops to loop through an array', function() {
+      it('should be able to use for loops to loop through an array', function() {
         var arr = [0, 0.3, 0.6, 1]
         for (var i = 0; i < arr.length; i++) {
           expect( Math.ceil(arr[i] * 3) ).toEqual(i);

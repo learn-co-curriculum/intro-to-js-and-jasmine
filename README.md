@@ -1,9 +1,3 @@
----
-  tags: jasmine, strings, numbers, booleans, variables, todo
-  languages: JavaScript, js
-  resources: 2
----
-
 # Intro to Jasmine and JavaScript
 ## Jasmine
 Jasmine is Flatiron's (and many other developers) testing library of choice for JavaScript.  It is modelled after RSpec, the de facto ruby testing library.  Jasmine offers a robust domain specific language that is easy to use and follow.  It's main use is for unit testing. In practice this means testing functions and objects in a program in isolation to assure they do what they're expected to.

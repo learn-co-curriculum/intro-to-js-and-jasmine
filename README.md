@@ -8,12 +8,7 @@ In Jasmine, to make set of tests for a particular subject you set it apart by cr
 This lab is designed to get you comfortable with the syntax of Jasmine as well as JavaScript.  All you need to do to complete it is make all the tests pass in the `spec/intro-spec.js`.  That is the only file you will need to edit.
 
 ##Before You Start
-Install jasmine:
 
-  ```shell
-  $ gem sources -a http://flatiron:33west26@gems.flatironschool.com
-  $ gem install learn-co
-  ```
 Run Jasmine test suite:
 
   ```shell

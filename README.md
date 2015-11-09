@@ -1,7 +1,7 @@
 # Intro to Jasmine and JavaScript
 ## Jasmine
 
-Jasmine is Flatiron's (and many other developers) testing library of choice for JavaScript.  It is modeled after RSpec, the de facto ruby testing library.  Jasmine offers a robust domain specific language that is easy to use and follow.  It's main use is for unit testing. In practice this means testing functions and objects in a program in isolation to assure they do what they're expected to.
+Jasmine is Flatiron's (and many other developers) testing library of choice for JavaScript.  It is modeled after RSpec, the de facto ruby testing library.  Jasmine offers a robust domain specific language that is easy to use and follow.  Its main use is for unit testing. In practice this means testing functions and objects in a program in isolation to assure they do what they're expected to.
 
 In Jasmine, to make set of tests for a particular subject you set it apart by creating a `describe` function with the first argument as the subject, and the second and `anonymous function`.  In the `block` of that `anonymous function` you can either go more specific with nested `describe` `block`s or an `it` function. `It` the actual test; it takes a string as the first argument about what it is testing and an `anonymous function` that contains an `expect` function that compares your code to the expected outcome.  
 

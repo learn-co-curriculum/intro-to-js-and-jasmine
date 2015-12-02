@@ -21,3 +21,5 @@ Run Jasmine test suite:
 * [String Constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 * [Number Constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
 * [Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
+<a href='https://learn.co/lessons/intro-to-js-and-jasmine' data-visibility='hidden'>View this lesson on Learn.co</a>

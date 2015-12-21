@@ -3,7 +3,7 @@ describe('Intro to Jasmine and JS basics', function() {
   
   describe('#favIceCream', function() {
     it('should return your fav icecream', function() {
-      expect(faveIcecream("mint chocolate chip")).toBe("I love mint chocolate chip");
+      expect(favIceCream("mint chocolate chip")).toBe("I love mint chocolate chip");
     });
     
   });
@@ -23,7 +23,7 @@ describe('Intro to Jasmine and JS basics', function() {
 
   describe('#theTruth', function() {
     it('return true', function() {
-      expect(theTruth).toBe(true);
+      expect(theTruth()).toBe(true);
     });
     
   });

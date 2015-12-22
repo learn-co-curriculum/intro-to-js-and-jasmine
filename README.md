@@ -1,8 +1,9 @@
 # Intro to Jasmine and JavaScript
 
 ## Objectives
-1. Run Jasmine Tests
-2. Use Debugger to figure
++ Run Jasmine Tests
++ Read Jasmine Tests
++ Use Debugger to figure out bugs in code
 
 ## Jasmine
 

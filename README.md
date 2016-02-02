@@ -27,7 +27,7 @@ The `expect` is calling the function `favIceCream` and passing in the parameter 
 
 ## Instructions
 
-This lab is designed to get you comfortable with the syntax of Jasmine as well as JavaScript.All you need to do to complete it is make all the tests pass in the `spec/intro-spec.js`.  You'll be coding your solution in `code.js`.
+This lab is designed to get you comfortable with the syntax of Jasmine as well as JavaScript. All you need to do to complete it is make all the tests pass in the `spec/intro-spec.js`.  You'll be coding your solution in `code.js`.
 
 Before you get started, make sure you run `learn -b` to see the tests output in the browser. Take each test step by step, and remember that you can use `debugger` if you get stuck.
 
@@ -43,3 +43,5 @@ Before you get started, make sure you run `learn -b` to see the tests output in 
 * [Jasmine Documentation](http://jasmine.github.io/2.0/introduction.html)
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/intro-to-js-and-jasmine' title='Intro to Jasmine and JavaScript'>Intro to Jasmine and JavaScript</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/intro-to-js-and-jasmine'>JS and Jasmine Testing Lab</a> on Learn.co and start learning to code for free.</p>

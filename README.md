@@ -7,7 +7,7 @@
 
 ## Jasmine
 
-In Jasmine, to make a set of tests for a particular subject you set it apart by creating a `describe` function with the first argument as the subject, and the second and `anonymous function`.  In the `block` of that `anonymous function` you can either go more specific with nested `describe` `block`s or an `it` function. `It` the actual test; it takes a string as the first argument about what it is testing and an `anonymous function` that contains an `expect` function that compares your code to the expected outcome.  
+In Jasmine, to make a set of tests for a particular subject you set it apart by creating a `describe` function with the first argument as the subject, and the second as an `anonymous function`.  In the `block` of that `anonymous function` you can either go more specific with nested `describe` `block`s or an `it` function. `It` the actual test; it takes a string as the first argument about what it is testing and an `anonymous function` that contains an `expect` function that compares your code to the expected outcome.  
 
 
 ## Test Walk-Through

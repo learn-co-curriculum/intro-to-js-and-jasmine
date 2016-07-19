@@ -20,9 +20,7 @@ We set up the "browser" in a call to `beforeAll()`:
 beforeAll(done => {
   const src = path.resolve(__dirname, '..', 'code.js');
 
-  jsdom.env('<div></div>', [src], {
-    virtualConsole: jsdom.createVirtualConsole().sendTo(console)
-  }, (err, window) => {
+  jsdom.env('<div></div>', [src], {}, (err, window) => {
     if (err) {
       return done(err);
     }
@@ -46,7 +44,7 @@ Then we call `jsdom.env()`. This function receives four arguments:
 
 1. An HTML string. This string sets up the DOM — it can be arbitrarily long (we could even read in a full HTML file), but in this case, we just need something basic, since our tests don't really use the DOM.
 2. An array of paths to source files. We only have on file to test, so it's the only element in the array.
-3. An options object. Here, we're using the `virtualConsole` object to proxy the browser console to Node.js' console for use in our tests.
+3. An options object. We can just use the default options, so we use an empty object.
 4. A callback. This function, in typical Node.js fashion, receives an error first. The `err` will most likely be `null`, but if it's defined, we call `done(err)` to tell Jasmine to stop and show us what went wrong. Assuming things are going as expected, we then take all of the things defined on `window` (including, in this lab, the functions we've written) and add them to `global` so that we can call them in our tests.
 
 Finally, we call `done()` with no arguments to tell Jasmine that we're finished with this `beforeAll()`. The tests start running here.

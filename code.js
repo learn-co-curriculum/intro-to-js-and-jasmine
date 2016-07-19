@@ -1,16 +1,15 @@
-function favIceCream(flavor){
-  return "I love " + flavor;
+function favoriteIceCream(flavor) {
+  return `I love ${flavor}.`;
 }
 
-function shouting(sentence){
+function shouting(sentence) {
   return sentence.toUpperCase();
 }
 
-function roundDown(num){
+function roundDown(num) {
   return Math.floor(num);
 }
 
-function theTruth(){
+function theTruth() {
   return true;
 }
-

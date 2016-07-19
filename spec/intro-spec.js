@@ -1,36 +1,41 @@
 const fs = require('fs');
-const jsdom = require('jsdom-global');
+const jsdom = require('jsdom');
 const path = require('path');
 
 describe('Intro to Jasmine and JS basics', () => {
-  beforeAll(() => {
-    const src = fs.readFileSync(path.resolve(__dirname, '..', 'code.js'), 'utf-8');
-    this.jsdom = jsdom('<div></div>', { src });
-  });
+  beforeAll(done => {
+    const src = path.resolve(__dirname, '..', 'code.js');
 
-  afterAll(() => {
-    this.jsdom();
-  });
+    jsdom.env('<div></div>', [src], {
+      virtualConsole: jsdom.createVirtualConsole().sendTo(console)
+    }, (err, window) => {
+      Object.keys(window).forEach(key => {
+        global[key] = window[key]
+      });
 
-  describe('#favIceCream', () => {
-    it('should return your fav icecream', () => {
-      expect(favIceCream("mint chocolate chip")).toBe("I love mint chocolate chip");
+      done();
     });
   });
 
-  describe('#shouting', () => {
+  describe('favoriteIceCream()', () => {
+    it('should return your fav icecream', () => {
+      expect(favoriteIceCream("mint chocolate chip")).toBe("I love mint chocolate chip");
+    });
+  });
+
+  describe('shouting()', () => {
     it('should return a string in all caps', () => {
       expect(shouting("i love javascript soooooo much")).toBe('I LOVE JAVASCRIPT SOOOOOO MUCH');
     });
   });
 
-  describe('#roundDown', () => {
+  describe('roundDown()', () => {
     it('should correctly floor the number', () => {
       expect(roundDown(5.99)).toBe(5);
     });
   });
 
-  describe('#theTruth', () => {
+  describe('theTruth()', () => {
     it('return true', () => {
       expect(theTruth()).toBe(true);
     });

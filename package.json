@@ -1,0 +1,32 @@
+{
+  "name": "intro-to-js-and-jasmine",
+  "version": "0.1.0",
+  "description": "Introduction to Jasmine-based tests in JavaScript",
+  "main": "code.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/learn-co-curriculum/intro-to-js-and-jasmine.git"
+  },
+  "keywords": [
+    "jasmine",
+    "testing",
+    "javascript"
+  ],
+  "author": "The Flatiron School",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/learn-co-curriculum/intro-to-js-and-jasmine/issues"
+  },
+  "homepage": "https://github.com/learn-co-curriculum/intro-to-js-and-jasmine#readme",
+  "devDependencies": {
+    "jasmine": "^2.4.1",
+    "jsdom": "^9.4.1",
+    "jsdom-global": "^2.0.0"
+  }
+}

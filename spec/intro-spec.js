@@ -9,6 +9,10 @@ describe('Intro to Jasmine and JS basics', () => {
     jsdom.env('<div></div>', [src], {
       virtualConsole: jsdom.createVirtualConsole().sendTo(console)
     }, (err, window) => {
+      if (err) {
+        return done(err);
+      }
+
       Object.keys(window).forEach(key => {
         global[key] = window[key]
       });

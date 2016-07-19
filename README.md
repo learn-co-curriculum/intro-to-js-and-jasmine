@@ -17,20 +17,39 @@ For example, in our test file, we're writing browser-based tests, we need to sim
 We set up the "browser" in a call to `beforeAll()`:
 
 ```javascript
-  beforeAll(() => {
-    const src = fs.readFileSync(path.resolve(__dirname, '..', 'code.js'), 'utf-8');
-    this.jsdom = jsdom('<div></div>', { src });
+beforeAll(done => {
+  const src = path.resolve(__dirname, '..', 'code.js');
+
+  jsdom.env('<div></div>', [src], {
+    virtualConsole: jsdom.createVirtualConsole().sendTo(console)
+  }, (err, window) => {
+    if (err) {
+      return done(err);
+    }
+
+    Object.keys(window).forEach(key => {
+      global[key] = window[key]
+    });
+
+    done();
   });
+});
 ```
 
-Then, when all of the tests have run, we tear that setup down with `afterAll()`:
+This looks a little intimidating, but don't worry, we'll walk you through it.
 
-```javascript
-  afterAll(() => {
-    this.jsdom();
-  });
-```
+The first thing to notice is `done`. This signals to Jasmine that what we're doing inside of `beforeAll()` runs asynchronously, and tells Jasmine to wait until we call `done()` to start running any of the tests. Notice where we call `done()` inside of the callback that gets `err, window` as its arguments.
 
+Then we assign the location of the code we want to test to the variable `src` — pretty basic. (Don't worry too much about `path.resolve` — it's a part of the Node.js path library for determining the path of something. In this case, it's figuring out where `code.js` lives.)
+
+Then we call `jsdom.env()`. This function receives four arguments:
+
+1. An HTML string. This string sets up the DOM — it can be arbitrarily long (we could even read in a full HTML file), but in this case, we just need something basic, since our tests don't really use the DOM.
+2. An array of paths to source files. We only have on file to test, so it's the only element in the array.
+3. An options object. Here, we're using the `virtualConsole` object to proxy the browser console to Node.js' console for use in our tests.
+4. A callback. This function, in typical Node.js fashion, receives an error first. The `err` will most likely be `null`, but if it's defined, we call `done(err)` to tell Jasmine to stop and show us what went wrong. Assuming things are going as expected, we then take all of the things defined on `window` (including, in this lab, the functions we've written) and add them to `global` so that we can call them in our tests.
+
+Finally, we call `done()` with no arguments to tell Jasmine that we're finished with this `beforeAll()`. The tests start running here.
 
 ## Test Walk-Through
 
@@ -59,10 +78,6 @@ Before you get started, make sure you run `learn` to see the test output in your
 3. Write a function called `roundDown`, which accepts a number as parameter and returns the number rounded down the closest whole number.
 
 4.  Write a function called `theTruth`, which returns `true`.
-
-## Note
-
-Because we're writing browser-based tests, we need to simulate a browser in our testing environment. To do so, we use `jsdom`, which mocks out objects and behaviors as if we were in a browser without actually forcing us to render anything in a browser window. This setup makes our tests portable — that is, it makes it so that they can run just about anywhere.
 
 ## Resources
 

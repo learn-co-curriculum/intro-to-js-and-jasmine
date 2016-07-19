@@ -6,9 +6,7 @@ describe('Intro to Jasmine and JS basics', () => {
   beforeAll(done => {
     const src = path.resolve(__dirname, '..', 'code.js');
 
-    jsdom.env('<div></div>', [src], {
-      virtualConsole: jsdom.createVirtualConsole().sendTo(console)
-    }, (err, window) => {
+    jsdom.env('<div></div>', [src], {}, (err, window) => {
       if (err) {
         return done(err);
       }
@@ -17,13 +15,13 @@ describe('Intro to Jasmine and JS basics', () => {
         global[key] = window[key]
       });
 
-      done();
+      return done();
     });
   });
 
   describe('favoriteIceCream()', () => {
     it('should return your fav icecream', () => {
-      expect(favoriteIceCream("mint chocolate chip")).toBe("I love mint chocolate chip");
+      expect(favoriteIceCream("mint chocolate chip")).toBe("I love mint chocolate chip.");
     });
   });
 

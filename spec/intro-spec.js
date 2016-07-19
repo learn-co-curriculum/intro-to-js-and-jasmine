@@ -6,9 +6,7 @@ describe('Intro to Jasmine and JS basics', () => {
   beforeAll(done => {
     const src = path.resolve(__dirname, '..', 'code.js');
 
-    jsdom.env('<div></div>', [src], {
-      virtualConsole: jsdom.createVirtualConsole().sendTo(console)
-    }, (err, window) => {
+    jsdom.env('<div></div>', [src], {}, (err, window) => {
       if (err) {
         return done(err);
       }
